@@ -42,8 +42,8 @@ student => {
     return {
         firstName: student.firstName,
         lastName: student.lastName,
-        minScore: Math.min(student.scores),
-        maxScore: Math.max(student.scores),
+        minScore: Math.min.apply(Math,student.scores),
+        maxScore: Math.max.apply(Math,student.scores),
         avgScore: student.scores.reduce((sum, value) => sum + value, 0) / student.scores.length
 
     };
